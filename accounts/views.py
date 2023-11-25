@@ -34,7 +34,7 @@ def user_login(request):
         password = request.POST.get('password')
         user = authenticate(username=user_name, password=password)
         login(request, user)
-        return redirect('profile')
+        return redirect('home')
     return render(request, 'accounts/signin.html')
 
 
